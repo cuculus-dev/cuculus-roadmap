@@ -8,8 +8,9 @@ assignees: ''
 ---
 
 ## Community Issue
-
 cuculus-dev/cuculus-community#{issue番号}
 
+## 概要
+
 ## Todo
-- [ ] やること
+- [ ] やることリスト

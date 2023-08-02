@@ -1,3 +1,3 @@
 export default function Home() {
-  return <main>Cuculus-roadmap</main>;
+  return <main>Home</main>;
 }

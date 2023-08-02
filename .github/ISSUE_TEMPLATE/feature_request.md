@@ -9,5 +9,7 @@ assignees: ''
 
 ## Community Issue
 
+cuculus-dev/cuculus-community#{issue番号}
+
 ## Todo
 - [ ] やること

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import EmotionRegistry from '@/components/ThemeRegistry/Registry';
 import React from 'react';
+import Header from '@/components/Header/Header';
 
 export const metadata: Metadata = {
   title: 'Cuculus Roadmap',
@@ -16,7 +17,10 @@ export default function RootLayout({
     <html lang="ja">
       <head />
       <body>
-        <EmotionRegistry>{children}</EmotionRegistry>
+        <EmotionRegistry>
+          <Header />
+          {children}
+        </EmotionRegistry>
       </body>
     </html>
   );

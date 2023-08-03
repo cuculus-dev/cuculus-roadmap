@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import EmotionRegistry from '@/components/providers/Registry';
+import EmotionRegistry from '@/components/provider/Registry';
 import React from 'react';
 import Header from '@/components/headers/Header';
 

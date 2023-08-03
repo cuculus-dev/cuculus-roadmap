@@ -1,9 +1,9 @@
 'use client';
 
-import EmotionCacheProvider from '@/components/providers/EmotionCache';
+import EmotionCacheProvider from '@/components/provider/EmotionCache';
 import { ThemeProvider } from '@mui/material';
 import React from 'react';
-import theme from "@/components/themes/theme";
+import theme from '@/components/theme/theme';
 
 const ThemeRegistry = ({ children }: { children: React.ReactNode }) => {
   return (

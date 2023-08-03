@@ -1,4 +1,13 @@
 import type { Preview } from '@storybook/react';
+import theme from '../src/components/themes/theme';
+import { withThemeFromJSXProvider } from '@storybook/addon-styling';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import '@fontsource/material-icons';
 
 const preview: Preview = {
   parameters: {
@@ -11,5 +20,16 @@ const preview: Preview = {
     },
   },
 };
+
+export const decorators = [
+  withThemeFromJSXProvider({
+    themes: {
+      default: theme,
+    },
+    defaultTheme: 'default',
+    Provider: ThemeProvider,
+    GlobalStyles: CssBaseline,
+  }),
+];
 
 export default preview;

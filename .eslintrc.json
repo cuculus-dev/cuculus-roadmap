@@ -5,8 +5,16 @@
     "plugin:import/warnings",
     "plugin:import/typescript",
     "next/core-web-vitals",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
-  "ignorePatterns": ["node_modules/*", "next.config.js"],
-  "plugins": ["react", "react-hooks", "import"]
+  "ignorePatterns": [
+    "node_modules/*",
+    "next.config.js"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import"
+  ]
 }

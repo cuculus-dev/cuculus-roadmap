@@ -8,6 +8,12 @@ npm install
 npm run dev
 ```
 
+## Storybook
+
+```bash
+npm run storybook
+```
+
 [http://localhost:3000](http://localhost:3000) を開いて確認出来ます。
 
 ## Build for AWS

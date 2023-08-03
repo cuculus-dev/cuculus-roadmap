@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import EmotionRegistry from '@/components/provider/Registry';
 import React from 'react';
-import Header from '@/components/headers/Header';
+import Header from '@/components/header/Header';
 
 export const metadata: Metadata = {
   title: 'Cuculus Roadmap',

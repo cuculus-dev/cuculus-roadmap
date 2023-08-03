@@ -1,6 +1,8 @@
 'use client';
 
 import styled from '@mui/material/styles/styled';
+import Logo from '@/components/header/Logo';
+import Link from 'next/link';
 
 const StyledHeader = styled('header')`
   top: 0;
@@ -15,7 +17,6 @@ const StyledHeader = styled('header')`
   border-width: 0;
   border-bottom-width: thin;
   background-color: rgba(255, 255, 255, 0.9);
-  position: static;
   color: ${({ theme }) => theme.palette.grey[800]};
   z-index: ${({ theme }) => theme.zIndex.appBar};
 `;
@@ -23,9 +24,9 @@ const StyledHeader = styled('header')`
 const Header = () => {
   return (
     <StyledHeader>
-      Left
+      <Logo />
       <div style={{ marginLeft: 'auto' }} />
-      RIGHT
+      <Link href="/sample">TO SAMPLE</Link>
     </StyledHeader>
   );
 };

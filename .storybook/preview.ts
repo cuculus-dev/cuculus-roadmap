@@ -2,12 +2,20 @@ import type { Preview } from '@storybook/react';
 import theme from '../src/components/theme/theme';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import '@fontsource/material-icons';
+
+export const parameters = {
+    viewport: {
+        viewports: INITIAL_VIEWPORTS,
+        defaultViewport: 'responsive'
+    },
+}
 
 const preview: Preview = {
   parameters: {

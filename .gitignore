@@ -39,3 +39,6 @@ next-env.d.ts
 
 # IDE
 .idea
+
+# styled-system
+styled-system

@@ -1,16 +1,11 @@
-import { css } from '@/styled-system/css';
+import RSCPanda from '@/components/feature/RSCPanda';
+import RCCPanda from '@/components/feature/RCCPanda';
 
 export default function Home() {
   return (
     <main>
-      <div
-        className={css`
-          font-size: xxx-large;
-          font-weight: bold;
-        `}
-      >
-        Hello 🐼!
-      </div>
+      <RSCPanda />
+      <RCCPanda />
     </main>
   );
 }

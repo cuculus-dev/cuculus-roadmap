@@ -14,8 +14,8 @@ export default {
         customDomain: {
           domainName:
             stack.stage == 'prod'
-              ? 'roadmap.cuculus.jp'
-              : `${stack.stage}.roadmap.cuculus.jp`,
+              ? 'about.cuculus.jp'
+              : `${stack.stage}.about.cuculus.jp`,
           hostedZone: 'cuculus.jp',
         },
       });

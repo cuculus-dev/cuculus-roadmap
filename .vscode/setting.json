@@ -1,0 +1,13 @@
+{
+    "typescript.preferences.importModuleSpecifier": "non-relative", //絶対パスで自動importする
+    "files.insertFinalNewline": true, // ファイル保存時、最終行に改行を挿入する
+    "files.trimFinalNewlines": true, // ファイル保存時、最終行以降の空行を削除する
+    "files.trimTrailingWhitespace": true, // ファイル保存時、末尾の空白をトリミングする
+
+    // formatter
+    "editor.formatOnSave": true, // ファイル保存時の自動フォーマット有効
+    "editor.formatOnPaste": true, // ペーストした文字の自動フォーマット有効
+    "editor.formatOnType": true, // 文字入力行の自動フォーマット有効
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // デフォルトフォーマッターをPrettierに指定
+}
+

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import EmotionRegistry from '@/components/provider/Registry';
 import React from 'react';
 import Header from '@/components/header/Header';
+import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
 
 export const metadata: Metadata = {
   title: 'Cuculus Roadmap',
@@ -17,10 +18,12 @@ export default function RootLayout({
     <html lang="ja">
       <head />
       <body>
-        <EmotionRegistry>
-          <Header />
-          {children}
-        </EmotionRegistry>
+        <KumaRegistry>
+          <EmotionRegistry>
+            <Header />
+            {children}
+          </EmotionRegistry>
+        </KumaRegistry>
       </body>
     </html>
   );

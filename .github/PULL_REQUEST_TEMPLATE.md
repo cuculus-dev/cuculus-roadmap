@@ -1,6 +1,6 @@
 ## Ticket
 
-- Github Issue: 
+- Github Issue: cuculus-dev/cuculus-roadmap/issues/${issue番号}
 
 ## 変更内容
 (変更した内容を記載してください)

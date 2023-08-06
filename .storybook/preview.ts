@@ -1,8 +1,11 @@
+import '@/styles/entry.css';
+
 import type { Preview } from '@storybook/react';
-import theme from '../src/components/theme/theme';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+// @ts-ignore 解決策わからず
+import theme from '@/components/theme/theme';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -11,11 +14,11 @@ import '@fontsource/roboto/700.css';
 import '@fontsource/material-icons';
 
 export const parameters = {
-    viewport: {
-        viewports: INITIAL_VIEWPORTS,
-        defaultViewport: 'responsive'
-    },
-}
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+    defaultViewport: 'responsive',
+  },
+};
 
 const preview: Preview = {
   parameters: {

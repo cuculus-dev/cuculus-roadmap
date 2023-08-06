@@ -18,6 +18,9 @@ export default {
               : `${stack.stage}.about.cuculus.jp`,
           hostedZone: 'cuculus.jp',
         },
+        environment: {
+          META_ROBOTS: stack.stage == 'prod' ? '' : 'noindex',
+        },
       });
 
       stack.addOutputs({

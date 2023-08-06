@@ -18,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head />
+      <head>
+        {process.env.META_ROBOTS ? (
+          <meta name="robots" content={process.env.META_ROBOTS} />
+        ) : undefined}
+      </head>
       <CssBaseline />
       <body>
         <EmotionRegistry>

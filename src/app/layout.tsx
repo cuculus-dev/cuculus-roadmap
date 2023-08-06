@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import EmotionRegistry from '@/components/provider/Registry';
 import React from 'react';
 import Header from '@/components/header/Header';
+import CssBaseline from '@mui/material/CssBaseline';
 
 export const metadata: Metadata = {
   title: 'Cuculus Roadmap',
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head />
+      <CssBaseline />
       <body>
         <EmotionRegistry>
           <Header />

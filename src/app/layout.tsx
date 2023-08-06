@@ -1,3 +1,5 @@
+import '@/styles/globals.css';
+
 import type { Metadata } from 'next';
 import EmotionRegistry from '@/components/provider/Registry';
 import React from 'react';

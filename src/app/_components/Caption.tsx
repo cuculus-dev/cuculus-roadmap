@@ -11,10 +11,10 @@ const Caption = () => {
           <span>&nbsp;</span>
           <span>Roadmap</span>
         </Title>
-        <p>
+        <Description>
           CuculusはTwitterに替わる場所として開発される新しいSNSです。
           事前に計画を公開することで、プロジェクトの方向性を共有し、フィードバックや意見を収集したいと考えています。
-        </p>
+        </Description>
       </div>
     </div>
   );
@@ -52,6 +52,25 @@ const Title = styled('h1')`
 
   font-weight: 600;
   color: #00ced1;
+`;
+
+const Description = styled('div')`
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  max-width: 780px;
+  font-size: 24px;
+
+  ${({ theme }) => theme.breakpoints.down('laptop')} {
+    max-width: 530px;
+  }
+
+  ${({ theme }) => theme.breakpoints.down('tablet')} {
+    max-width: 480px;
+  }
 `;
 
 export default Caption;

@@ -16,5 +16,13 @@
     "react",
     "react-hooks",
     "import"
-  ]
+  ],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*"]
+      }
+    ]
+  }
 }

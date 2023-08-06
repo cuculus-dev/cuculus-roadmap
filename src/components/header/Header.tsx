@@ -1,6 +1,6 @@
 'use client';
 
-import styled from '@mui/material/styles/styled';
+import { styled } from '@mui/material/styles';
 import Logo from '@/components/header/Logo';
 import Link from 'next/link';
 

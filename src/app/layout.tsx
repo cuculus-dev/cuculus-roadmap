@@ -1,3 +1,5 @@
+import 'modern-css-reset/dist/reset.min.css';
+
 import type { Metadata } from 'next';
 import EmotionRegistry from '@/components/provider/Registry';
 import React from 'react';

@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import styled from '@mui/material/styles/styled';
+import { styled } from '@mui/material/styles';
 
 /**
  * 横幅を制限する

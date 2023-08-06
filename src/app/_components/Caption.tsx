@@ -12,8 +12,10 @@ const Caption = () => {
           <span>Roadmap</span>
         </Title>
         <Description>
-          CuculusはTwitterに替わる場所として開発される新しいSNSです。
-          事前に計画を公開することで、プロジェクトの方向性を共有し、フィードバックや意見を収集したいと考えています。
+          <span>CuculusはTwitterに替わる場所として</span>
+          <span>開発される新しいSNSです。</span>
+          <span>事前に計画を公開することでプロジェクトの方向性を共有し、</span>
+          <span>フィードバックや意見を収集したいと考えています。</span>
         </Description>
       </div>
     </div>
@@ -60,6 +62,7 @@ const Description = styled('div')`
   margin: 0 auto;
   padding-right: 16px;
   padding-left: 16px;
+  color: #334155;
 
   max-width: 780px;
   font-size: 24px;

@@ -15,7 +15,7 @@ const Caption = () => {
           <span>CuculusはTwitterに替わる場所として</span>
           <span>開発される新しいSNSです。</span>
           <span>事前に計画を公開することでプロジェクトの方向性を共有し、</span>
-          <span>フィードバックや意見を収集したいと考えています。</span>
+          <span>意見や要望を募集したいと考えています。</span>
         </Description>
       </div>
     </div>

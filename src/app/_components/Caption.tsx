@@ -12,7 +12,7 @@ const Caption = () => {
           <span>Roadmap</span>
         </Title>
         <Description>
-          <span>CuculusはTwitterに替わる場所として</span>
+          <span>Cuculusは短文投稿サービスとして</span>
           <span>開発される新しいSNSです。</span>
           <span>事前に計画を公開することでプロジェクトの方向性を共有し、</span>
           <span>意見や要望を募集したいと考えています。</span>

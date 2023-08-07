@@ -33,10 +33,6 @@ jobs:
       - name: NPM install
         run: npm install
 
-      - name: workaround for detached HEAD
-        run: |
-          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
-
       - name: run reg-suit
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

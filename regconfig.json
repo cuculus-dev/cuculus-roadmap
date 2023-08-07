@@ -22,7 +22,9 @@
     },
     "reg-publish-s3-plugin": {
       "bucketName": "$REG_SUITE_S3_BUCKET_NAME",
-      "acl": "private"
+      "sdkOptions": {
+        "region": "ap-northeast-1"
+      }
     }
   }
 }

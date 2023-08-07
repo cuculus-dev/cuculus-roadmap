@@ -1,10 +1,15 @@
+name: Run VRT
+
 on:
   pull_request:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
-  build:
+  run-vrt:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: develop
     steps:
       - uses: actions/checkout@v2
         with:

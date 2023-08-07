@@ -21,10 +21,7 @@
       "privateToken": "$GITHUB_TOKEN"
     },
     "reg-publish-s3-plugin": {
-      "bucketName": "$REG_SUITE_S3_BUCKET_NAME",
-      "sdkOptions": {
-        "region": "ap-northeast-1"
-      }
+      "bucketName": "$REG_SUITE_S3_BUCKET_NAME"
     }
   }
 }

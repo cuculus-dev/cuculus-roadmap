@@ -1,27 +1,17 @@
-import useSWR from 'swr';
-import { Octokit } from '@octokit/core';
-import { Endpoints } from '@octokit/types';
-import { components } from '@octokit/openapi-types';
+import useSWRImmutable from 'swr';
+import {components} from '@octokit/openapi-types';
 
-const fetcher = async () => {
-  const route = 'GET /repos/{owner}/{repo}/milestones';
-  type Response = Endpoints[typeof route]['response'];
-  type Parameters = Endpoints[typeof route]['parameters'];
+export type milestone = components['schemas']['milestone'];
 
-  const params: Parameters = {
-    owner: 'cuculus-dev',
-    repo: 'cuculus-community',
-  };
-
-  const octokit = new Octokit();
-  const response: Response = await octokit.request(route, params);
-  return response.data;
+const fetcher = async ({url}: { url: string }) => {
+    const data = await (await fetch(`${process.env.NEXT_PUBLIC_GITHUB_API_URL}${url}`)).json();
+    return data as milestone[];
 };
 
 export const useMilestones = () => {
-  const { data } = useSWR<components['schemas']['milestone'][]>(
-    { url: 'milestone' },
-    fetcher,
-  );
-  return { data };
+    const {data} = useSWRImmutable<milestone[]>(
+        {url: '/repos/cuculus-dev/cuculus-community/milestones'},
+        fetcher,
+    );
+    return {data};
 };

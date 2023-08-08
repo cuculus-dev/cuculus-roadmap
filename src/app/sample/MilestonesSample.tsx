@@ -10,7 +10,11 @@ const MilestoneSample = () => {
   const { data } = useMilestones();
   return (
     <div>
-      {data && data.map((item, index) => <div key={index}>{item.title}</div>)}
+      {data ? (
+        data.map((item, index) => <div key={index}>{item.title}</div>)
+      ) : (
+        <div>loading...</div>
+      )}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import MilestoneSample from '@/app/sample/MilestonesSample';
+import MilestoneSample from '@/app/sample/_components/MilestonesSample';
 
 export default function Sample() {
   return (

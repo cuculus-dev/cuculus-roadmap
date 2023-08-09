@@ -9,6 +9,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  output: 'export',// TODO open-next buildは通らなくなるので、分けられるようにする
 };
 
 module.exports = nextConfig;

@@ -1,5 +1,7 @@
 'use client';
 
+import { Button } from '@/components/feature/Button';
+import { LinkButton } from '@/components/feature/Button';
 import { styled } from '@mui/material/styles';
 
 const Caption = () => {
@@ -17,7 +19,18 @@ const Caption = () => {
           <span>事前に計画を公開することでプロジェクトの方向性を共有し、</span>
           <span>意見や要望を募集したいと考えています。</span>
         </Description>
+        <Button label={'hoge'}></Button>
+        <LinkButton
+          label={'てすてす'}
+          url={'https://www.yahoo.co.jp/'}
+        ></LinkButton>
       </div>
+      <LinkButton
+        label={'アイデア/機能を提案する'}
+        url={
+          'https://github.com/orgs/cuculus-dev/discussions/new?category=ideas'
+        }
+      ></LinkButton>
     </div>
   );
 };

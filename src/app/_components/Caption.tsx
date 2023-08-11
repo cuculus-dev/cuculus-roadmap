@@ -3,6 +3,7 @@
 import { Button } from '@/components/feature/Button';
 import { LinkButton } from '@/components/feature/Button';
 import { styled } from '@mui/material/styles';
+import Link from 'next/link';
 
 const Caption = () => {
   return (
@@ -20,10 +21,8 @@ const Caption = () => {
           <span>意見や要望を募集したいと考えています。</span>
         </Description>
         <Button label={'hoge'}></Button>
-        <LinkButton
-          label={'てすてす'}
-          url={'https://www.yahoo.co.jp/'}
-        ></LinkButton>
+        <LinkButton label={'てすてす'} url={'/sample'}></LinkButton>
+        <Link href={'/sample'}>ネクストのリンク。サンプルに飛ぶよ</Link>
       </div>
       <LinkButton
         label={'アイデア/機能を提案する'}

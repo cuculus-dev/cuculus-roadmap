@@ -19,9 +19,7 @@ export const LinkButton = ({ label, url, ...rest }: LinkButtonProps) => (
     variant="contained"
     color="success"
     size="medium"
-    onClick={() => {
-      window.location.href = url;
-    }}
+    href={url}
     {...rest}
   >
     {label}

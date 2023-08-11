@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button as MuiButton } from '@mui/material';
+import Link from 'next/link';
 
 export interface ButtonProps {
   label: string;
@@ -19,6 +20,7 @@ export const LinkButton = ({ label, url, ...rest }: LinkButtonProps) => (
     variant="contained"
     color="success"
     size="medium"
+    component={Link}
     href={url}
     {...rest}
   >

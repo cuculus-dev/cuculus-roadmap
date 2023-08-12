@@ -1,3 +1,9 @@
+import MilestoneSample from '@/app/sample/_components/MilestonesSample';
+
 export default function Sample() {
-  return <main>Sample</main>;
+  return (
+    <main>
+      <MilestoneSample />
+    </main>
+  );
 }

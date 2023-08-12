@@ -64,7 +64,7 @@ const Title = styled('h1')`
   }
 
   font-weight: 600;
-  color: #00ced1;
+  color: ${({ theme }) => theme.palette.primary.main};
 `;
 
 const Description = styled('div')`
@@ -73,7 +73,7 @@ const Description = styled('div')`
   margin: 0 auto;
   padding-right: 16px;
   padding-left: 16px;
-  color: ${({ theme }) => theme.palette.primary.main};
+  color: ${({ theme }) => theme.palette.grey[800]};
 
   max-width: 780px;
   font-size: 24px;

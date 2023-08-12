@@ -62,7 +62,7 @@ const Description = styled('div')`
   margin: 0 auto;
   padding-right: 16px;
   padding-left: 16px;
-  color: #334155;
+  color: ${({ theme }) => theme.palette.primary.main};
 
   max-width: 780px;
   font-size: 24px;

@@ -27,7 +27,7 @@ const Header = () => {
     <StyledHeader>
       <Logo />
       <div style={{ marginLeft: 'auto' }} />
-      <Link href="/sample"></Link>
+      <Link href="/sample">To Sample</Link>
       <GitHubLink href="https://github.com/cuculus-dev" />
     </StyledHeader>
   );

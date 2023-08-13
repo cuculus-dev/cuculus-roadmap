@@ -3,9 +3,13 @@
 import GitHubSvg from 'assets/images/github-mark.svg';
 import Link from 'next/link';
 
-export default function GitHubLink() {
+type Props = {
+  href: string;
+};
+
+export default function GitHubLink({ href }: Props) {
   return (
-    <Link href="https://github.com/cuculus-dev">
+    <Link href={href} passHref>
       <GitHubSvg />;
     </Link>
   );

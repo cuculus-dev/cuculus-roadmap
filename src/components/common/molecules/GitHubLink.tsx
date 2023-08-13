@@ -1,16 +1,12 @@
 'use client';
 
-import LinkButton from '@/components/common/atoms/LinkButton';
 import GitHubSvg from 'assets/images/github-mark.svg';
+import Link from 'next/link';
 
-type Props = {
-    href: string;
-}
-
-export default function GitHubLink({href}:Props) {
+export default function GitHubLink() {
   return (
-    <LinkButton href={href}>
-      <GitHubSvg />
-    </LinkButton>
+    <Link href="https://github.com/cuculus-dev">
+      <GitHubSvg />;
+    </Link>
   );
 }

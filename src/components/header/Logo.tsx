@@ -7,11 +7,7 @@ type Props = {
 };
 
 const Logo = ({ height = '60' }: Props) => {
-  return (
-    <Link href="/">
-      Cuculus
-    </Link>
-  );
+  return <Link href="/">Cuculus</Link>;
 };
 
 export default Logo;

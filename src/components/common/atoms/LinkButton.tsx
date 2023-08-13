@@ -11,8 +11,8 @@ export default function LinkButton({
   ...args
 }: LinkButtonProps) {
   return (
-    <Button component={Link} href={href} {...args}>
-      {children}
-    </Button>
+    <Link href={href} passHref>
+      <Button {...args}>{children}</Button>
+    </Link>
   );
 }

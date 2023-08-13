@@ -1,6 +1,7 @@
 'use client';
 
 import { styled } from '@mui/material/styles';
+import LinkButton from '@/components/common/atoms/LinkButton';
 
 const Caption = () => {
   return (
@@ -17,6 +18,14 @@ const Caption = () => {
           <span>事前に計画を公開することでプロジェクトの方向性を共有し、</span>
           <span>意見や要望を募集したいと考えています。</span>
         </Description>
+        <div style={{ margin: '0 auto', textAlign: 'center' }}>
+          <LinkButton
+            variant="outlined"
+            href="https://github.com/orgs/cuculus-dev/discussions/categories/ideas"
+          >
+            アイデア/機能を提案する
+          </LinkButton>
+        </div>
       </div>
     </div>
   );

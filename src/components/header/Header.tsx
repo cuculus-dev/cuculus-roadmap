@@ -3,6 +3,7 @@
 import { styled } from '@mui/material/styles';
 import Logo from '@/components/header/Logo';
 import Link from 'next/link';
+import GitHubLink from '@/components/common/molecules/GitHubLink';
 
 const StyledHeader = styled('header')`
   top: 0;
@@ -26,7 +27,8 @@ const Header = () => {
     <StyledHeader>
       <Logo />
       <div style={{ marginLeft: 'auto' }} />
-      <Link href="/sample">TO SAMPLE</Link>
+      <Link href="/sample"></Link>
+      <GitHubLink href="https://github.com/cuculus-dev"></GitHubLink>
     </StyledHeader>
   );
 };

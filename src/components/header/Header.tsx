@@ -26,7 +26,7 @@ const StyledHeader = styled('header')`
 const Header = () => {
   return (
     <StyledHeader>
-      <CuculusLogo />
+      <CuculusLogo href="/" />
       <div style={{ marginLeft: 'auto' }} />
       <Link href="/sample">To Sample</Link>
       <GitHubLink href="https://github.com/cuculus-dev" />

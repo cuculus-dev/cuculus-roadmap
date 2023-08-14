@@ -1,7 +1,6 @@
 'use client';
 
 import { styled } from '@mui/material/styles';
-import Logo from '@/components/header/Logo';
 import Link from 'next/link';
 import GitHubLink from '@/components/common/molecules/GitHubLink';
 import CuculusLogo from '@/components/common/molecules/CuculusLogo';
@@ -26,7 +25,9 @@ const StyledHeader = styled('header')`
 const Header = () => {
   return (
     <StyledHeader>
-      <CuculusLogo href="/" />
+      <div style={{ padding: '2px' }}>
+        <CuculusLogo href={'/'} />
+      </div>
       <div style={{ marginLeft: 'auto' }} />
       <Link href="/sample">To Sample</Link>
       <GitHubLink href="https://github.com/cuculus-dev" />

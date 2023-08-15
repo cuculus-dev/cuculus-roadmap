@@ -22,12 +22,26 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   webpackFinal: async (config) => {
+    /**
+     * FIXME 良い方法があればそっちに変更したい。
+     * @svgr/webpackを使ってSVGを表示できるようにSVG loaderを上書きしてる
+     */
+    config.module.rules = config.module.rules.map((rule) => {
+      if (
+        rule &&
+        rule !== '...' &&
+        rule.test instanceof RegExp &&
+        rule.test.test('.svg')
+      ) {
+        rule.exclude = /\.svg$/;
+      }
+      return rule;
+    });
+
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
-      issuer: /\.tsx$/,
     });
-
     if (config.resolve?.alias) {
       config.resolve.alias = {
         ...config.resolve.alias,

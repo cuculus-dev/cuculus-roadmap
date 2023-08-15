@@ -1,9 +1,9 @@
 'use client';
 
 import { styled } from '@mui/material/styles';
-import Logo from '@/components/header/Logo';
 import Link from 'next/link';
 import GitHubLink from '@/components/common/molecules/GitHubLink';
+import CuculusLogo from '@/components/common/molecules/CuculusLogo';
 
 const StyledHeader = styled('header')`
   top: 0;
@@ -16,8 +16,10 @@ const StyledHeader = styled('header')`
   border-style: solid;
   border-color: ${({ theme }) => theme.palette.grey[100]};
   border-width: 0;
-  border-bottom-width: thin;
-  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom-width: 2px;
+  border-image: linear-gradient(to right, #ff40db, #3ea8ff, #5affbc) 1;
+  background-color: rgba(0, 0, 0, 0.0625);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   color: ${({ theme }) => theme.palette.grey[800]};
   z-index: ${({ theme }) => theme.zIndex.appBar};
 `;
@@ -25,7 +27,9 @@ const StyledHeader = styled('header')`
 const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
+      <div style={{ padding: '2px' }}>
+        <CuculusLogo href={'/'} />
+      </div>
       <div style={{ marginLeft: 'auto' }} />
       <Link href="/sample">To Sample</Link>
       <GitHubLink href="https://github.com/cuculus-dev" />

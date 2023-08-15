@@ -24,7 +24,7 @@ const config: StorybookConfig = {
   webpackFinal: async (config) => {
     /**
      * FIXME 良い方法があればそっちに変更したい。
-     * @svgr/webpackを使ってSVGを表示できるようにSVG loaderを上書きしてる
+     * SVGに関するルールを削除
      */
     config.module.rules = config.module.rules.map((rule) => {
       if (
@@ -33,13 +33,16 @@ const config: StorybookConfig = {
         rule.test instanceof RegExp &&
         rule.test.test('.svg')
       ) {
-        rule.exclude = /\.svg$/;
+        return undefined;
       }
       return rule;
     });
 
     config.module.rules.push({
       test: /\.svg$/,
+      issuer: {
+        and: [/\.(js|ts)x?$/],
+      },
       use: ['@svgr/webpack'],
     });
     if (config.resolve?.alias) {

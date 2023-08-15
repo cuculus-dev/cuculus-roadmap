@@ -1,6 +1,6 @@
 'use client';
 
-import CuculusLogoSvg from 'assets/images/headerlogo.svg';
+import CuculusLogoSvg from '@assets/images/headerlogo.svg';
 import Link from 'next/link';
 
 type Props = {

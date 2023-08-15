@@ -19,6 +19,7 @@ const StyledHeader = styled('header')`
   border-bottom-width: 2px;
   border-image: linear-gradient(to right, #ff40db, #3ea8ff, #5affbc) 1;
   background-color: rgba(0, 0, 0, 0.0625);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   color: ${({ theme }) => theme.palette.grey[800]};
   z-index: ${({ theme }) => theme.zIndex.appBar};
 `;

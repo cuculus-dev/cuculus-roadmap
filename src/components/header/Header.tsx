@@ -16,8 +16,10 @@ const StyledHeader = styled('header')`
   border-style: solid;
   border-color: ${({ theme }) => theme.palette.grey[100]};
   border-width: 0;
-  border-bottom-width: thin;
-  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom-width: 2px;
+  border-image: linear-gradient(to right, #ff40db, #3ea8ff, #5affbc) 1;
+  background-color: rgba(0, 0, 0, 0.0625);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   color: ${({ theme }) => theme.palette.grey[800]};
   z-index: ${({ theme }) => theme.zIndex.appBar};
 `;

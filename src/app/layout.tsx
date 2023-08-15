@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="ja">
       <head />
       <CssBaseline />
-      <body>
+      <body style={{ backgroundColor: '#dcecfc' }}>
         <EmotionRegistry>
           <Header />
           {children}

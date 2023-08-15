@@ -2,70 +2,45 @@
 
 import { styled } from '@mui/material';
 
-const BackgroundColor = styled('div')`
-  background-color: #dcecfc;
-`;
-const Responsive = styled('img')`
-  max-width: 100%;
-`;
-
-const StyledZindex1 = styled('div')`
-  //background-image: url('/images/cloud_1.svg');
-  //background-repeat: no-repeat;
-  position: absolute; //xy軸で px指定する
+const Back = styled('div')`
+  position: absolute;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  width: 100vw;
-  margin-top: -280px;
-  margin-left: -300px;
-  z-index: 3;
-`;
-
-const StyledZindex2 = styled('div')`
-  //background-image: url('/images/cloud_2.svg');
-  //background-repeat: no-repeat;
-  position: absolute; //xy軸で px指定する
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  width: 100vw;
-  margin-top: -40px;
-  margin-left: 300px;
-  z-index: 1;
-`;
-
-const StyledZindex3 = styled('div')`
-  //background-image: url('/images/cloud_3.svg');
-  //background-repeat: no-repeat;
-  position: absolute; //xy軸で px指定する
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  margin-top: 210px;
-  margin-left: -250px;
-  z-index: 4;
 `;
 
-const StyledZindex4 = styled('div')`
-  //background-image: url('/images/cloud_4.svg');
-  //background-repeat: no-repeat;
-  position: absolute; //xy軸で px指定する
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  width: 100vw;
-  margin-top: 375px;
-  margin-left: 450px;
-  z-index: 2;
+const Cloud4 = styled('img')`
+  max-width: 1024px;
+  width: 100%;
+
+  position: absolute;
+  z-index: -10;
 `;
 
-//svgファイルから画像サイズいじって合わせる
+const Cloud2 = styled('img')`
+  max-width: 1024px;
+  width: 100%;
+
+  position: absolute;
+  z-index: -20;
+`;
+
+const Cloud3 = styled('img')`
+  max-width: 1024px;
+  width: 100%;
+
+  position: absolute;
+  z-index: -30;
+`;
+
+const Cloud1 = styled('img')`
+  max-width: 1024px;
+  width: 100%;
+
+  position: absolute;
+  z-index: -40;
+`;
 
 export default function Background({
   children,
@@ -73,22 +48,14 @@ export default function Background({
   children: React.ReactNode;
 }) {
   return (
-    <BackgroundColor>
-      <Responsive>
-        <StyledZindex1>
-          <img src="/images/cloud_4.svg" />
-        </StyledZindex1>
-        <StyledZindex2>
-          <img src="/images/cloud_2.svg" />
-        </StyledZindex2>
-        <StyledZindex3>
-          <img src="/images/cloud_3.svg" />
-        </StyledZindex3>
-        <StyledZindex4>
-          <img src="/images/cloud_1.svg" />
-        </StyledZindex4>
-      </Responsive>
+    <>
+      <Back>
+        <Cloud4 src="/images/cloud_4.svg" />
+        <Cloud2 src="/images/cloud_2.svg" />
+        <Cloud3 src="/images/cloud_3.svg" />
+        <Cloud1 src="/images/cloud_1.svg" />
+      </Back>
       {children}
-    </BackgroundColor>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import GitHubSvg from 'assets/images/github-mark.svg';
+import GitHubSvg from '@assets/images/github-mark.svg';
 import Link from 'next/link';
 import { styled } from '@mui/material/styles';
 

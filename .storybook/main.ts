@@ -40,6 +40,9 @@ const config: StorybookConfig = {
 
     config.module.rules.push({
       test: /\.svg$/,
+      issuer: {
+        and: [/\.(js|ts)x?$/],
+      },
       use: ['@svgr/webpack'],
     });
     if (config.resolve?.alias) {

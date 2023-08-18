@@ -10,7 +10,7 @@ const StyledZindex1 = styled('div')`
   background-image: url('/images/cloud_1.svg');
   background-repeat: no-repeat;
   background-position: top; //xy軸で px指定する
-  background-size: auto;
+  background-size: 100% 100%;
   z-index: 1;
 `;
 
@@ -18,7 +18,7 @@ const StyledZindex2 = styled('div')`
   background-image: url('/images/cloud_2.svg');
   background-repeat: no-repeat;
   background-position: top; //xy軸で px指定する
-  background-size: auto;
+  background-size: 100% 100%;
   z-index: 2;
 `;
 
@@ -26,7 +26,7 @@ const StyledZindex3 = styled('div')`
   background-image: url('/images/cloud_3.svg');
   background-repeat: no-repeat;
   background-position: top; //xy軸で px指定する
-  background-size: auto;
+  background-size: 100% 100%;
   z-index: 3;
 `;
 
@@ -34,7 +34,7 @@ const StyledZindex4 = styled('div')`
   background-image: url('/images/cloud_4.svg');
   background-repeat: no-repeat;
   background-position: top; //xy軸で px指定する
-  background-size: auto;
+  background-size: 100% 100%;
   z-index: 4;
 `;
 

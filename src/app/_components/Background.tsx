@@ -9,33 +9,33 @@ const BackgroundColor = styled('div')`
 const StyledZindex1 = styled('div')`
   background-image: url('/images/cloud_1.svg');
   background-repeat: no-repeat;
-  background-position: top; //xy軸で px指定する
+  position: relative; //xy軸で px指定する
   background-size: 100% 100%;
-  z-index: 1;
+  z-index: 3;
 `;
 
 const StyledZindex2 = styled('div')`
   background-image: url('/images/cloud_2.svg');
   background-repeat: no-repeat;
-  background-position: top; //xy軸で px指定する
+  position: relative; //xy軸で px指定する
   background-size: 100% 100%;
-  z-index: 2;
+  z-index: 1;
 `;
 
 const StyledZindex3 = styled('div')`
   background-image: url('/images/cloud_3.svg');
   background-repeat: no-repeat;
-  background-position: top; //xy軸で px指定する
+  position: relative; //xy軸で px指定する
   background-size: 100% 100%;
-  z-index: 3;
+  z-index: 4;
 `;
 
 const StyledZindex4 = styled('div')`
   background-image: url('/images/cloud_4.svg');
   background-repeat: no-repeat;
-  background-position: top; //xy軸で px指定する
+  position: relative; //xy軸で px指定する
   background-size: 100% 100%;
-  z-index: 4;
+  z-index: 2;
 `;
 
 //svgファイルから画像サイズいじって合わせる
@@ -47,13 +47,11 @@ export default function Background({
 }) {
   return (
     <BackgroundColor>
-      <StyledZindex1>
-        <StyledZindex2>
-          <StyledZindex3>
-            <StyledZindex4>{children}</StyledZindex4>
-          </StyledZindex3>
-        </StyledZindex2>
-      </StyledZindex1>
+      <StyledZindex1 />
+      <StyledZindex2 />
+      <StyledZindex3 />
+      <StyledZindex4 />
+      {children}
     </BackgroundColor>
   );
 }

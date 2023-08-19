@@ -11,48 +11,39 @@ const Back = styled('div')`
 `;
 
 const Cloud1 = styled('img')`
-  max-width: 1255px;
   width: 100%;
-  margin-top: -330px;
-  margin-left: -800px;
+  top: calc(-26vw);
+  left: calc(-64vw);
 
   position: absolute;
   z-index: -30;
 `;
 
 const Cloud2 = styled('img')`
-  max-width: 1226px;
   width: 100%;
-  margin-top: -40px;
-  margin-left: 400px;
+  top: calc(-3vw);
+  left: calc(33vw);
 
   position: absolute;
   z-index: -40;
 `;
 
 const Cloud3 = styled('img')`
-  max-width: 1283px;
   width: 100%;
-  margin-top: 160px;
-  margin-left: -720px;
+  top: calc(12vw);
+  left: calc(-56vw);
 
   position: absolute;
   z-index: -10;
 `;
 
 const Cloud4 = styled('img')`
-  max-width: 1006px;
   width: 100%;
-  margin-top: 320px;
-  margin-left: 750px;
+  top: calc(32vw);
+  left: calc(75vw);
 
   position: absolute;
   z-index: -20;
-
-  // FIXME タブレット以下だった場合は黄色にして最前面にしちゃうサンプル
-  ${({ theme }) => theme.breakpoints.down('tablet')} {
-    background-color: yellow; // FIXME
-  }
 `;
 
 export default function Background({

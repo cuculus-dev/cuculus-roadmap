@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <main>
       <Caption />
+      <div style={{ height: '1000px' }}>DUMMY</div>
     </main>
   );
 }

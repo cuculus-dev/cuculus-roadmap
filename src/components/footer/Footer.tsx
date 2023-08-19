@@ -8,12 +8,15 @@ import GitHubLink from '@/components/common/molecules/GitHubLink';
 const StyledFooter = styled('footer')`
   display: flex;
   justify-content: space-between;
+  padding: 10px;
   //justify-content: space-around;
   box-shadow: none;
   border-style: solid;
   border-color: ${({ theme }) => theme.palette.grey[100]};
   border-width: 0;
   border-bottom-width: 2px;
+  border-top-width: 2px;
+  border-width: 2px;
   border-image: linear-gradient(to right, #ff40db, #3ea8ff, #5affbc) 1;
   background-color: rgba(0, 0, 0, 0.0625);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -23,11 +26,18 @@ const StyledFooter = styled('footer')`
 const Footer = () => {
   return (
     <StyledFooter>
-      <div style={{ display: 'flex', alignItems: 'end' }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
         <GitHubLink href="https://github.com/cuculus-dev" />
-        Copyright © Cuculus.All Rights Reserved.
+        <div style={{ marginLeft: '5px' }}>
+          Copyright © Cuculus.All Rights Reserved.
+        </div>
       </div>
-      <div style={{ fontSize: '20px', display: 'flex', alignItems: 'end' }}>
+      <div style={{ fontSize: '20px', display: 'flex', alignItems: 'center' }}>
         <Link href="https://github.com/cuculus-dev/cuculus-roadmap/discussions/categories/q-a">
           お問い合わせ
         </Link>

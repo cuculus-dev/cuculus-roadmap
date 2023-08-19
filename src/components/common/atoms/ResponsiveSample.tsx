@@ -3,12 +3,22 @@
 import { styled } from '@mui/material/styles';
 
 const IsDesktop = styled('div')`
-  ${({ theme }) => theme.breakpoints.down('laptop')} {
+  ${({ theme }) => theme.breakpoints.down('desktop')} {
     display: none;
   }
 `;
 
 const IsLaptop = styled('div')`
+  ${({ theme }) => theme.breakpoints.up('desktop')} {
+    display: none;
+  }
+
+  ${({ theme }) => theme.breakpoints.down('laptop')} {
+    display: none;
+  }
+`;
+
+const IsTablet = styled('div')`
   ${({ theme }) => theme.breakpoints.up('laptop')} {
     display: none;
   }
@@ -18,18 +28,8 @@ const IsLaptop = styled('div')`
   }
 `;
 
-const IsTablet = styled('div')`
-  ${({ theme }) => theme.breakpoints.up('tablet')} {
-    display: none;
-  }
-
-  ${({ theme }) => theme.breakpoints.down('mobile')} {
-    display: none;
-  }
-`;
-
 const IsMobile = styled('div')`
-  ${({ theme }) => theme.breakpoints.up('mobile')} {
+  ${({ theme }) => theme.breakpoints.up('tablet')} {
     display: none;
   }
 `;

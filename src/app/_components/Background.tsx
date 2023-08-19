@@ -40,6 +40,11 @@ const Cloud1 = styled('img')`
 
   position: absolute;
   z-index: -40;
+
+  // FIXME タブレット以下だった場合は黄色にして最前面にしちゃうサンプル
+  ${({ theme }) => theme.breakpoints.down('tablet')} {
+    background-color: yellow; // FIXME
+  }
 `;
 
 export default function Background({

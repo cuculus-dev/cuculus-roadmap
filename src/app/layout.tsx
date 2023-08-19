@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import EmotionRegistry from '@/components/provider/Registry';
 import React from 'react';
 import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 import CssBaseline from '@mui/material/CssBaseline';
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
         <EmotionRegistry>
           <Header />
           {children}
+          <Footer />
         </EmotionRegistry>
       </body>
     </html>

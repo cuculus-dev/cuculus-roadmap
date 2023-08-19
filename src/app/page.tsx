@@ -7,6 +7,7 @@ export default function Home() {
       <Background>
         <Caption />
         <Caption /> {/*画像サイズ確認用*/}
+        <Caption /> {/*画像サイズ確認用*/}
       </Background>
     </main>
   );

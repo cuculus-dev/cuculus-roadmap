@@ -17,7 +17,7 @@ const StyledHeader = styled('header')`
   border-color: ${({ theme }) => theme.palette.grey[100]};
   border-width: 0;
   border-bottom-width: 2px;
-  border-image: linear-gradient(to right, #ff40db, #3ea8ff, #5affbc) 1;
+  border-bottom-color: #3ea8ff;
   background-color: rgba(0, 0, 0, 0.0625);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   color: ${({ theme }) => theme.palette.grey[800]};
@@ -31,7 +31,6 @@ const Header = () => {
         <CuculusLogo href={'/'} />
       </div>
       <div style={{ marginLeft: 'auto' }} />
-      <Link href="/sample">To Sample</Link>
       <GitHubLink href="https://github.com/cuculus-dev" />
     </StyledHeader>
   );

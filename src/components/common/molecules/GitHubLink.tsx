@@ -5,9 +5,15 @@ import { IconButton } from '@mui/material';
 
 type Props = {
   href: string;
+  width?: string;
+  height?: string;
 };
 
-export default function GitHubLink({ href }: Props) {
+export default function GitHubLink({
+  href,
+  width = '35',
+  height = '34',
+}: Props) {
   return (
     <IconButton
       target="_blank"
@@ -17,7 +23,7 @@ export default function GitHubLink({ href }: Props) {
       title="GitHub"
       size="small"
     >
-      <GitHubSvg width="35" height="34" viewBox="0 0 98 96" />
+      <GitHubSvg width={width} height={height} viewBox="0 0 98 96" />
     </IconButton>
   );
 }

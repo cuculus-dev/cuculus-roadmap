@@ -3,6 +3,7 @@
 import { styled } from '@mui/material/styles';
 
 const StyledBackground = styled('div')`
+  min-height: 100vh;
   background-color: #dcecfc;
   background-position: top center;
   background-size: 100% auto;

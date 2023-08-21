@@ -6,6 +6,7 @@ import React from 'react';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import CssBaseline from '@mui/material/CssBaseline';
+import Background from '@/components/layout/Background';
 
 export const metadata: Metadata = {
   title: 'Cuculus Roadmap',
@@ -24,9 +25,11 @@ export default function RootLayout({
       <CssBaseline />
       <body>
         <EmotionRegistry>
-          <Header />
-          {children}
-          <Footer />
+          <Background>
+            <Header />
+            {children}
+            <Footer />
+          </Background>
         </EmotionRegistry>
       </body>
     </html>

@@ -10,7 +10,7 @@ type Props = {
 export default function CuculusLogo({ href }: Props) {
   return (
     <Link href={href} passHref>
-      <CuculusLogoSvg />
+      <CuculusLogoSvg width="129" height="31" viewBox="0 0 219 53" />
     </Link>
   );
 }

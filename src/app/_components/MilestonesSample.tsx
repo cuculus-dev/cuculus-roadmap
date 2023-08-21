@@ -6,10 +6,10 @@ import { useMilestones } from '@/swr/client/milestones';
  * マイルストーン取得サンプル
  * @constructor
  */
-const MilestoneSample = () => {
+const MilestonesSample = () => {
   const { data } = useMilestones();
   return (
-    <div>
+    <div style={{ padding: '16px' }}>
       {data ? (
         data.map((item, index) => (
           <div key={index}>
@@ -24,4 +24,4 @@ const MilestoneSample = () => {
   );
 };
 
-export default MilestoneSample;
+export default MilestonesSample;

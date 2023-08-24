@@ -10,7 +10,7 @@ const StyledHeader = styled('header')`
   border-style: solid;
   border-color: ${({ theme }) => theme.palette.grey[100]};
   border-width: 0;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   border-bottom-color: #3ea8ff;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);

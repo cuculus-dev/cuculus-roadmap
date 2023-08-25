@@ -23,6 +23,7 @@
       {
         "patterns": ["@mui/*/*/*"]
       }
-    ]
+    ],
+    "no-unused-vars": "warn"
   }
 }

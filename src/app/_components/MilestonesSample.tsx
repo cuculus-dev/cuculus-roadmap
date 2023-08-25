@@ -1,5 +1,6 @@
 'use client';
 
+import Issues from '@/app/_components/Issues';
 import { useMilestones } from '@/swr/client/milestones';
 
 /**
@@ -15,6 +16,7 @@ const MilestonesSample = () => {
           <div key={index}>
             <div>{item.title}</div>
             <div>{item.description}</div>
+            <Issues milestonesNumber={item.number} />
           </div>
         ))
       ) : (

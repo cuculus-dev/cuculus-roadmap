@@ -1,7 +1,6 @@
 'use client';
 
 import { useIssues } from '@/swr/client/issues';
-import { useMilestones } from '@/swr/client/milestones';
 
 type Props = {
   milestonesNumber: number;

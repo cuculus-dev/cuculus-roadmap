@@ -4,10 +4,10 @@ import { components } from '@octokit/openapi-types';
 export type milestone = components['schemas']['milestone'];
 
 const fetcher = async ({ url }: { url: string }) => {
-  const data = await (
+  const data = (await (
     await fetch(`${process.env.NEXT_PUBLIC_GITHUB_API_URL}${url}`)
-  ).json();
-  return data as milestone[];
+  ).json()) as milestone[];
+  return data;
 };
 
 export const useMilestones = () => {

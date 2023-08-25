@@ -20,7 +20,7 @@ const Caption = () => {
         </Description>
         <div style={{ margin: '0 auto', textAlign: 'center' }}>
           <LinkButton
-            variant="outlined"
+            variant="contained"
             href="https://github.com/orgs/cuculus-dev/discussions/categories/ideas"
           >
             アイデア/機能を提案する
@@ -39,6 +39,7 @@ const Title = styled('h1')`
   margin-top: 16px;
   margin-bottom: 16px;
   font-family:
+    'MuseoModerno',
     'General Sans',
     -apple-system,
     BlinkMacSystemFont,

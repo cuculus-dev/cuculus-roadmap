@@ -3,15 +3,15 @@
 import { useIssues } from '@/swr/client/issues';
 
 type Props = {
-  milestonesNumber: number;
+  milestoneNumber: number;
 };
 
 /**
  * issues取得
  * @constructor
  */
-const Issues = ({ milestonesNumber }: Props) => {
-  const { data } = useIssues(milestonesNumber);
+const Issues = ({ milestoneNumber }: Props) => {
+  const { data } = useIssues(milestoneNumber);
   return (
     <div style={{ padding: '16px' }}>
       {data ? (

@@ -1,22 +1,24 @@
 'use client';
 
-import Issues from '@/app/_components/issues';
+import { useIssues } from '@/swr/client/issues';
 import { useMilestones } from '@/swr/client/milestones';
 
+type Props = {
+  milestonesNumber: number;
+};
+
 /**
- * マイルストーン取得サンプル
+ * issues取得
  * @constructor
  */
-const MilestonesSample = () => {
-  const { data } = useMilestones();
+const Issues = ({ milestonesNumber }: Props) => {
+  const { data } = useIssues(milestonesNumber);
   return (
     <div style={{ padding: '16px' }}>
       {data ? (
         data.map((item, index) => (
           <div key={index}>
             <div>{item.title}</div>
-            <div>{item.description}</div>
-            <Issues milestonesNumber={item.number} />
           </div>
         ))
       ) : (
@@ -26,4 +28,4 @@ const MilestonesSample = () => {
   );
 };
 
-export default MilestonesSample;
+export default Issues;

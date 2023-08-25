@@ -1,6 +1,6 @@
 'use client';
 
-import Issues from '@/app/_components/issues';
+import Issues from '@/app/_components/Issues';
 import { useMilestones } from '@/swr/client/milestones';
 
 /**

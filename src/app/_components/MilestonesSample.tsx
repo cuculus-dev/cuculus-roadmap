@@ -16,7 +16,7 @@ const MilestonesSample = () => {
           <div key={index}>
             <div>{item.title}</div>
             <div>{item.description}</div>
-            <Issues milestonesNumber={item.number} />
+            <Issues milestoneNumber={item.number} />
           </div>
         ))
       ) : (

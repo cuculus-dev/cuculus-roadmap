@@ -2,25 +2,36 @@
 
 import { styled } from '@mui/material/styles';
 import LinkButton from '@/components/common/atoms/LinkButton';
+import { CloudFormationInit } from 'aws-cdk-lib/aws-ec2';
+import { Color } from 'aws-cdk-lib/aws-cloudwatch';
 
 const Caption = () => {
   return (
     <div>
       <div style={{ padding: '16px' }}>
-        <Title>
+        <Title style={{ color: '#3EA8FF', fontSize: '48px' }}>
           <span>Cuculus</span>
           <span>&nbsp;</span>
           <span>Roadmap</span>
         </Title>
-        <Description>
-          <span>Cuculusは短文投稿サービスとして</span>
-          <span>開発される新しいSNSです。</span>
-          <span>事前に計画を公開することでプロジェクトの方向性を共有し、</span>
-          <span>意見や要望を募集したいと考えています。</span>
+        <Description
+          style={{ color: '#333359', fontSize: '24px', maxWidth: '580px' }}
+        >
+          <span>
+            Cuculusは新しいけどどこか懐かしい
+            <br />
+            短文投稿サービスです。
+            <br />
+          </span>
+          <span>
+            事前に計画を公開することでみなさんとプロジェクトの方向性を共有し、
+            意見や要望を募集し、よりよいSNSを作っていこうと考えています。
+          </span>
         </Description>
         <div style={{ margin: '0 auto', textAlign: 'center' }}>
           <LinkButton
             variant="contained"
+            sx={{ borderRadius: '55px' }}
             href="https://github.com/orgs/cuculus-dev/discussions/categories/ideas"
           >
             アイデア/機能を提案する
@@ -32,6 +43,9 @@ const Caption = () => {
 };
 
 const Title = styled('h1')`
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -52,8 +66,6 @@ const Title = styled('h1')`
     'Segoe UI Emoji',
     'Segoe UI Symbol';
 
-  font-size: 112px;
-
   ${({ theme }) => theme.breakpoints.down('laptop')} {
     font-size: 80px;
   }
@@ -67,15 +79,16 @@ const Title = styled('h1')`
 `;
 
 const Description = styled('div')`
-  font-weight: 400;
   text-align: center;
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin: 0 auto;
   padding-right: 16px;
   padding-left: 16px;
   color: ${({ theme }) => theme.palette.grey[800]};
-
-  max-width: 780px;
-  font-size: 24px;
 
   ${({ theme }) => theme.breakpoints.down('laptop')} {
     max-width: 530px;

@@ -13,11 +13,13 @@ const MilestonesSample = () => {
     <div style={{ padding: '16px' }}>
       {data ? (
         data.map((item, index) => (
-          <div key={index}>
-            <div>{item.title}</div>
-            <div>{item.description}</div>
+          <>
+            <div key={index}>
+              <div>{item.title}</div>
+              <div>{item.description}</div>
+            </div>
             <Issues milestoneNumber={item.number} />
-          </div>
+          </>
         ))
       ) : (
         <div>loading...</div>

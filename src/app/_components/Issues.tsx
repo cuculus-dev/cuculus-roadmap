@@ -13,7 +13,7 @@ type Props = {
 const Issues = ({ milestoneNumber }: Props) => {
   const { data } = useIssues(milestoneNumber);
   return (
-    <div style={{ padding: '16px' }}>
+    <>
       {data ? (
         data.map((item, index) => (
           <div key={index}>
@@ -23,7 +23,7 @@ const Issues = ({ milestoneNumber }: Props) => {
       ) : (
         <div>loading...</div>
       )}
-    </div>
+    </>
   );
 };
 

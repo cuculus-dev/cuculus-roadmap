@@ -1,6 +1,7 @@
 'use client';
 
 import { useIssues } from '@/swr/client/issues';
+import Card from '@/components/common/organisms/Card';
 
 type Props = {
   milestoneNumber: number;
@@ -16,9 +17,7 @@ const Issues = ({ milestoneNumber }: Props) => {
     <>
       {data ? (
         data.map((item, index) => (
-          <div key={index}>
-            <div>{item.title}</div>
-          </div>
+          <Card key={index} title={item.title} description={null} />
         ))
       ) : (
         <div>loading...</div>

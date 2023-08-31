@@ -4,6 +4,7 @@ import Issues from '@/app/_components/Issues';
 import { useMilestones } from '@/swr/client/milestones';
 import { styled } from '@mui/material';
 import Card from '@/components/common/organisms/Card';
+import Box from '@mui/material/Box';
 
 const StyledContainer = styled('div')`
   width: 645px;
@@ -17,16 +18,6 @@ const StyledContainer = styled('div')`
   backdrop-filter: blur(10px);
 `;
 
-const StyledWrite = styled('div')`
-  width: 600px;
-  min-height: 300px;
-  margin: 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid;
-  border-bottom-color: #d9d9d9;
-  margin: 20px;
-`;
-
 /**
  * マイルストーン取得サンプル
  * @constructor
@@ -35,24 +26,37 @@ const Milestones = () => {
   const { data } = useMilestones();
   return (
     <StyledContainer>
-      <StyledWrite>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-end',
+          mr: 2,
+        }}
+      >
         <div style={{ padding: '16px' }}>
           {data ? (
             data.map((item, index) => (
               <>
-                <Card
-                  key={index}
-                  title={item.title}
-                  description={item.description}
-                />
-                <Issues milestoneNumber={item.number} />
+                <Box sx={{ mb: 1 }}>
+                  <Card
+                    label={null}
+                    key={index}
+                    title={item.title}
+                    description={item.description}
+                    state={item.state}
+                  />
+                </Box>
+                <Box sx={{ width: 300, height: 'auto', ml: 'auto', mb: 1 }}>
+                  <Issues milestoneNumber={item.number} />
+                </Box>
               </>
             ))
           ) : (
             <div>loading...</div>
           )}
         </div>
-      </StyledWrite>
+      </Box>
     </StyledContainer>
   );
 };

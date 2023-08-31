@@ -2,6 +2,7 @@
 
 import { useIssues } from '@/swr/client/issues';
 import Card from '@/components/common/organisms/Card';
+import Box from '@mui/material/Box';
 
 type Props = {
   milestoneNumber: number;
@@ -17,7 +18,15 @@ const Issues = ({ milestoneNumber }: Props) => {
     <>
       {data ? (
         data.map((item, index) => (
-          <Card key={index} title={item.title} description={null} />
+          <Box sx={{ mb: 0.5 }}>
+            <Card
+              key={index}
+              title={item.title}
+              label={item.labels_url}
+              state={item.state}
+              description={null}
+            />
+          </Box>
         ))
       ) : (
         <div>loading...</div>

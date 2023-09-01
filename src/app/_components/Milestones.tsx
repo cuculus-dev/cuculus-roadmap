@@ -38,16 +38,14 @@ const Milestones = () => {
           {data ? (
             data.map((item, index) => (
               <>
-                <Box sx={{ mb: 1 }}>
-                  <Card
-                    label={null}
-                    key={index}
-                    title={item.title}
-                    description={item.description}
-                    state={item.state}
-                  />
-                </Box>
-                <Box sx={{ width: 300, height: 'auto', ml: 'auto', mb: 1 }}>
+                <Card
+                  label={null}
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                  state={item.state}
+                />
+                <Box sx={{ width: 300, height: 'auto', ml: 'auto' }}>
                   <Issues milestoneNumber={item.number} />
                 </Box>
               </>

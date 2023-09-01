@@ -19,15 +19,13 @@ const Issues = ({ milestoneNumber }: Props) => {
     <>
       {data ? (
         data.map((item, index) => (
-          <Box sx={{ mb: 0.5 }}>
-            <Card
-              key={index}
-              title={item.title}
-              label={item.labels_url}
-              state={item.state}
-              description={null}
-            />
-          </Box>
+          <Card
+            key={index}
+            title={item.title}
+            label={item.labels_url}
+            state={item.state}
+            description={null}
+          />
         ))
       ) : (
         <Skeleton width={345} height="auto">

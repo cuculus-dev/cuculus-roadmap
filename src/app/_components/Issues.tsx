@@ -3,6 +3,7 @@
 import { useIssues } from '@/swr/client/issues';
 import Card from '@/components/common/organisms/Card';
 import Box from '@mui/material/Box';
+import { Skeleton } from '@mui/material';
 
 type Props = {
   milestoneNumber: number;
@@ -29,7 +30,9 @@ const Issues = ({ milestoneNumber }: Props) => {
           </Box>
         ))
       ) : (
-        <div>loading...</div>
+        <Skeleton width={345} height="auto">
+          loading...
+        </Skeleton>
       )}
     </>
   );

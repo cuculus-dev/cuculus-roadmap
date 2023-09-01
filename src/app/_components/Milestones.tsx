@@ -2,7 +2,7 @@
 
 import Issues from '@/app/_components/Issues';
 import { useMilestones } from '@/swr/client/milestones';
-import { styled } from '@mui/material';
+import { Skeleton, styled } from '@mui/material';
 import Card from '@/components/common/organisms/Card';
 import Box from '@mui/material/Box';
 
@@ -53,7 +53,9 @@ const Milestones = () => {
               </>
             ))
           ) : (
-            <div>loading...</div>
+            <Skeleton width={345} height="auto">
+              loading...
+            </Skeleton>
           )}
         </div>
       </Box>

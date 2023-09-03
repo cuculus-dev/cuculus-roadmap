@@ -10,7 +10,6 @@ export function SkeltonMilestonesCard() {
         avatar={<Skeleton variant="circular" width={40} height={40} />}
         title={<Skeleton width={257} />}
       ></CardHeader>
-
       <CardContent>
         <Typography
           variant="body2"
@@ -31,7 +30,6 @@ export function SkeltonIssuesCard() {
         avatar={<Skeleton variant="circular" width={40} height={40} />}
         title={<Skeleton width={212} />}
       ></CardHeader>
-
       <CardContent>
         <Typography
           variant="body2"

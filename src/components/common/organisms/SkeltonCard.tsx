@@ -11,11 +11,7 @@ export default function SkeltonCard() {
         title={<Skeleton width="100%" />}
       ></CardHeader>
       <CardContent>
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          whiteSpace="pre-wrap"
-        >
+        <Typography variant="body2" whiteSpace="pre-wrap">
           <Skeleton width="100%" />
         </Typography>
       </CardContent>

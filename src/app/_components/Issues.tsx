@@ -2,7 +2,7 @@
 
 import { useIssues } from '@/swr/client/issues';
 import Card from '@/components/common/organisms/Card';
-import { SkeltonIssuesCard } from '@/components/common/organisms/SkeltonCard';
+import SkeltonCard from '@/components/common/organisms/SkeltonCard';
 
 type Props = {
   milestoneNumber: number;
@@ -27,7 +27,7 @@ const Issues = ({ milestoneNumber }: Props) => {
           />
         ))
       ) : (
-        <SkeltonIssuesCard />
+        <SkeltonCard />
       )}
     </>
   );

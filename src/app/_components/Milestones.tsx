@@ -5,7 +5,7 @@ import { useMilestones } from '@/swr/client/milestones';
 import { styled } from '@mui/material';
 import Card from '@/components/common/organisms/Card';
 import Box from '@mui/material/Box';
-import { SkeltonMilestonesCard } from '@/components/common/organisms/SkeltonCard';
+import SkeltonCard from '@/components/common/organisms/SkeltonCard';
 
 const StyledContainer = styled('div')`
   width: 645px;
@@ -19,10 +19,6 @@ const StyledContainer = styled('div')`
   backdrop-filter: blur(10px);
 `;
 
-/**
- * マイルストーン取得サンプル
- * @constructor
- */
 const Milestones = () => {
   const { data } = useMilestones();
   return (
@@ -52,7 +48,7 @@ const Milestones = () => {
               </>
             ))
           ) : (
-            <SkeltonMilestonesCard />
+            <SkeltonCard />
           )}
         </div>
       </Box>

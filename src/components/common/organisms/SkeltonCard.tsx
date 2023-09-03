@@ -3,12 +3,12 @@
 import MuiCard from '@mui/material/Card';
 import { CardContent, CardHeader, Skeleton, Typography } from '@mui/material';
 
-export function SkeltonMilestonesCard() {
+export default function SkeltonCard() {
   return (
-    <MuiCard sx={{ maxWidth: 345 }}>
+    <MuiCard sx={{ maxWidth: 345, width: 345 }}>
       <CardHeader
         avatar={<Skeleton variant="circular" width={40} height={40} />}
-        title={<Skeleton width={257} />}
+        title={<Skeleton width="100%" />}
       ></CardHeader>
       <CardContent>
         <Typography
@@ -16,27 +16,7 @@ export function SkeltonMilestonesCard() {
           color="text.secondary"
           whiteSpace="pre-wrap"
         >
-          <Skeleton width={313} />
-        </Typography>
-      </CardContent>
-    </MuiCard>
-  );
-}
-
-export function SkeltonIssuesCard() {
-  return (
-    <MuiCard sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={<Skeleton variant="circular" width={40} height={40} />}
-        title={<Skeleton width={212} />}
-      ></CardHeader>
-      <CardContent>
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          whiteSpace="pre-wrap"
-        >
-          <Skeleton width={268} />
+          <Skeleton width="100%" />
         </Typography>
       </CardContent>
     </MuiCard>

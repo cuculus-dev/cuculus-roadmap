@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import GitHubLink from './GitHubLink';
 
 const meta = {
-  title: 'components/common/molecules/GitHubLink',
   component: GitHubLink,
   parameters: {},
   tags: ['autodocs'],

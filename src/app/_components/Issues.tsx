@@ -13,7 +13,8 @@ type Props = {
  * @constructor
  */
 const Issues = ({ milestoneNumber }: Props) => {
-  const { data } = useIssues(milestoneNumber);
+  const { data, error } = useIssues(milestoneNumber);
+  if (error) return <></>;
   return (
     <>
       {data ? (
@@ -22,7 +23,7 @@ const Issues = ({ milestoneNumber }: Props) => {
             key={index}
             title={item.title}
             label={item.labels_url}
-            state={item.state}
+            state={item.state == 'open' ? 'open' : 'closed'}
             description={null}
           />
         ))

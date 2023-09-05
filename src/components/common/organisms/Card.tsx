@@ -5,7 +5,7 @@ import { Avatar, CardContent, CardHeader, Typography } from '@mui/material';
 import ActiveSvg from '@assets/images/active.svg';
 import MargedSvg from '@assets/images/marged.svg';
 
-type State = 'open' | 'closed' | string;
+type State = 'open' | 'closed';
 
 type Props = {
   title: string;

@@ -37,7 +37,6 @@ const Milestones = () => {
             data.map((item, index) => (
               <>
                 <Card
-                  label={null}
                   key={index}
                   title={item.title}
                   description={item.description}

@@ -22,7 +22,6 @@ const Issues = ({ milestoneNumber }: Props) => {
           <Card
             key={index}
             title={item.title}
-            label={item.labels_url}
             state={item.state == 'open' ? 'open' : 'closed'}
             description={null}
           />

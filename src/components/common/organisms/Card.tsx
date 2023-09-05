@@ -10,7 +10,6 @@ type State = 'open' | 'closed';
 type Props = {
   title: string;
   description: string | null;
-  label: string | null;
   state: State;
 };
 

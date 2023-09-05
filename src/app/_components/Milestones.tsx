@@ -20,7 +20,8 @@ const StyledContainer = styled('div')`
 `;
 
 const Milestones = () => {
-  const { data } = useMilestones();
+  const { data, error } = useMilestones();
+  if (error) return <></>;
   return (
     <StyledContainer>
       <Box

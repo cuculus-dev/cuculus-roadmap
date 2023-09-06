@@ -1,21 +1,35 @@
 'use client';
 
+import { MuseoModerno } from '@next/font/google';
 import { styled } from '@mui/material/styles';
 import LinkButton from '@/components/common/atoms/LinkButton';
 import { CloudFormationInit } from 'aws-cdk-lib/aws-ec2';
 import { Color } from 'aws-cdk-lib/aws-cloudwatch';
 
+const museoModerno = MuseoModerno({ subsets: ['latin'] });
+
 const Caption = () => {
   return (
     <div>
       <div style={{ padding: '16px' }}>
-        <Title style={{ color: '#3EA8FF', fontSize: '48px' }}>
+        <Title
+          style={{
+            color: '#3EA8FF',
+            fontSize: '48px',
+          }}
+          className={museoModerno.className}
+        >
           <span>Cuculus</span>
           <span>&nbsp;</span>
           <span>Roadmap</span>
         </Title>
         <Description
-          style={{ color: '#333359', fontSize: '24px', maxWidth: '580px' }}
+          style={{
+            color: '#333359',
+            fontSize: '24px',
+            maxWidth: '580px',
+            fontFamily: 'Arial',
+          }}
         >
           <span>
             Cuculusは新しいけどどこか懐かしい
@@ -52,8 +66,8 @@ const Title = styled('h1')`
   flex-wrap: wrap;
   margin-top: 16px;
   margin-bottom: 16px;
-  font-family:
-    'MuseoModerno',
+  /*font-family:
+    'Lato',
     'General Sans',
     -apple-system,
     BlinkMacSystemFont,
@@ -64,7 +78,7 @@ const Title = styled('h1')`
     sans-serif,
     'Apple Color Emoji',
     'Segoe UI Emoji',
-    'Segoe UI Symbol';
+    'Segoe UI Symbol';*/
 
   ${({ theme }) => theme.breakpoints.down('laptop')} {
     font-size: 80px;

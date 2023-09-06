@@ -3,9 +3,13 @@ import MilestonesSample from '@/app/_components/MilestonesSample';
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ display: 'flex' }}>
       <Caption />
-      <MilestonesSample />
+      <div style={{ display: 'row' }}>
+        <MilestonesSample />
+        <MilestonesSample />
+        <MilestonesSample />
+      </div>
     </main>
   );
 }

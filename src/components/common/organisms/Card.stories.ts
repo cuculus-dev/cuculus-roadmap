@@ -15,7 +15,6 @@ export const Default: Story = {
   args: {
     title: 'タイトル',
     description: '説明',
-    label: 'ラベル',
     state: 'closed',
   },
 };

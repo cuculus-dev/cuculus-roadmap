@@ -4,7 +4,6 @@ import Issues from '@/app/_components/Issues';
 import { useMilestones } from '@/swr/client/milestones';
 import { styled } from '@mui/material';
 import Card from '@/components/common/organisms/Card';
-import Box from '@mui/material/Box';
 import SkeltonCard from '@/components/common/organisms/SkeltonCard';
 
 const StyledContainer = styled('div')`
@@ -19,19 +18,25 @@ const StyledContainer = styled('div')`
   backdrop-filter: blur(10px);
 `;
 
+const StyledMilestoneCard = styled('div')`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: auto;
+`;
+
+const StyledIssueCard = styled('div')`
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+`;
+
 const Milestones = () => {
   const { data, error } = useMilestones();
   if (error) return <></>;
   return (
     <StyledContainer>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-end',
-          mr: 2,
-        }}
-      >
+      <StyledMilestoneCard>
         <div style={{ padding: '16px' }}>
           {data ? (
             data.map((item, index) => (
@@ -42,16 +47,16 @@ const Milestones = () => {
                   description={item.description}
                   state={item.state}
                 />
-                <Box sx={{ width: 300, height: 'auto', ml: 'auto' }}>
+                <StyledIssueCard>
                   <Issues milestoneNumber={item.number} />
-                </Box>
+                </StyledIssueCard>
               </>
             ))
           ) : (
             <SkeltonCard />
           )}
         </div>
-      </Box>
+      </StyledMilestoneCard>
     </StyledContainer>
   );
 };

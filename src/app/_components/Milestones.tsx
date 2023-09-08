@@ -7,28 +7,20 @@ import Card from '@/components/common/organisms/Card';
 import SkeltonCard from '@/components/common/organisms/SkeltonCard';
 
 const StyledContainer = styled('div')`
-  width: 645px;
+  max-width: 645px;
+  width: 100%;
   min-height: 300px;
   border-radius: 8px;
   border: 1px solid #fff;
   flex-shrink: 0;
-  padding: 5px;
-  padding-bottom: 300px;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
+  padding: 16px 0;
 `;
 
 const StyledMilestoneCard = styled('div')`
-  display: flex;
-  flex-direction: column;
   align-items: flex-end;
   margin-right: auto;
-`;
-
-const StyledIssueCard = styled('div')`
-  width: 300px;
-  height: auto;
-  margin-left: auto;
 `;
 
 const Milestones = () => {
@@ -37,25 +29,21 @@ const Milestones = () => {
   return (
     <StyledContainer>
       <StyledMilestoneCard>
-        <div style={{ padding: '16px' }}>
-          {data ? (
-            data.map((item, index) => (
-              <>
-                <Card
-                  key={index}
-                  title={item.title}
-                  description={item.description}
-                  state={item.state}
-                />
-                <StyledIssueCard>
-                  <Issues milestoneNumber={item.number} />
-                </StyledIssueCard>
-              </>
-            ))
-          ) : (
-            <SkeltonCard />
-          )}
-        </div>
+        {data ? (
+          data.map((item, index) => (
+            <>
+              <Card
+                key={index}
+                title={item.title}
+                description={item.description}
+                state={item.state}
+              />
+              <Issues milestoneNumber={item.number} />
+            </>
+          ))
+        ) : (
+          <SkeltonCard />
+        )}
       </StyledMilestoneCard>
     </StyledContainer>
   );

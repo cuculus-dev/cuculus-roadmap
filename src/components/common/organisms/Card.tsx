@@ -1,9 +1,21 @@
 'use client';
 
 import MuiCard from '@mui/material/Card';
-import { Avatar, CardContent, CardHeader, Typography } from '@mui/material';
+import {
+  Avatar,
+  CardContent,
+  CardHeader,
+  Typography,
+  styled,
+} from '@mui/material';
 import ActiveSvg from '@assets/images/active.svg';
 import MargedSvg from '@assets/images/marged.svg';
+
+const StyledCard = styled('div')`
+  background-color: #ffffff;
+  border-bottom: 1px solid;
+  border-bottom-color: #d9d9d9;
+`;
 
 type State = 'open' | 'closed';
 
@@ -19,7 +31,7 @@ const getStateIcon = (state: State) => {
 
 export default function Card({ title, description, state }: Props) {
   return (
-    <MuiCard sx={{ maxWidth: 345 }}>
+    <StyledCard>
       <CardHeader
         avatar={
           <Avatar sx={{ backgroundColor: 'transparent' }}>
@@ -37,6 +49,6 @@ export default function Card({ title, description, state }: Props) {
           {description}
         </Typography>
       </CardContent>
-    </MuiCard>
+    </StyledCard>
   );
 }

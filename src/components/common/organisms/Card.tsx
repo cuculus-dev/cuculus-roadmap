@@ -1,6 +1,5 @@
 'use client';
 
-import MuiCard from '@mui/material/Card';
 import {
   Avatar,
   CardContent,

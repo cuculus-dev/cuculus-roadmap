@@ -1,6 +1,15 @@
 'use client';
 
 import { useIssues } from '@/swr/client/issues';
+import Card from '@/components/common/organisms/Card';
+import SkeltonCard from '@/components/common/organisms/SkeltonCard';
+import { styled } from '@mui/material';
+
+const StyledIssueCard = styled('div')`
+  width: 85%;
+  height: auto;
+  margin-left: auto;
+`;
 
 type Props = {
   milestoneNumber: number;
@@ -11,19 +20,23 @@ type Props = {
  * @constructor
  */
 const Issues = ({ milestoneNumber }: Props) => {
-  const { data } = useIssues(milestoneNumber);
+  const { data, error } = useIssues(milestoneNumber);
+  if (error) return <></>;
   return (
-    <div style={{ padding: '16px' }}>
+    <StyledIssueCard>
       {data ? (
         data.map((item, index) => (
-          <div key={index}>
-            <div>{item.title}</div>
-          </div>
+          <Card
+            key={index}
+            title={item.title}
+            state={item.state == 'open' ? 'open' : 'closed'}
+            description={null}
+          />
         ))
       ) : (
-        <div>loading...</div>
+        <SkeltonCard />
       )}
-    </div>
+    </StyledIssueCard>
   );
 };
 

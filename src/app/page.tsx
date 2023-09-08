@@ -1,11 +1,11 @@
 import Caption from '@/app/_components/Caption';
-import MilestonesSample from '@/app/_components/MilestonesSample';
+import Milestones from '@/app/_components/Milestones';
 
 export default function Home() {
   return (
     <main>
       <Caption />
-      <MilestonesSample />
+      <Milestones />
     </main>
   );
 }

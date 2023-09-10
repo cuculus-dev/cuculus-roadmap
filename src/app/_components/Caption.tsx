@@ -12,33 +12,19 @@ const Caption = () => {
   return (
     <div>
       <div style={{ padding: '16px' }}>
-        <Title
-          style={{
-            color: '#3EA8FF',
-            fontSize: '48px',
-          }}
-          className={museoModerno.className}
-        >
+        <Title style={{}} className={museoModerno.className}>
           <span>Cuculus</span>
           <span>&nbsp;</span>
           <span>Roadmap</span>
         </Title>
-        <Description
-          style={{
-            color: '#333359',
-            fontSize: '24px',
-            maxWidth: '580px',
-            fontFamily: 'Arial',
-          }}
-        >
+        <Description style={{}}>
           <span>
-            Cuculusは新しいけどどこか懐かしい
-            <br />
-            短文投稿サービスです。
+            Cuculusは新しいけどどこか懐かしい短文投稿サービスです。
             <br />
           </span>
           <span>
             事前に計画を公開することでみなさんとプロジェクトの方向性を共有し、
+            <br />
             意見や要望を募集し、よりよいSNSを作っていこうと考えています。
           </span>
         </Description>
@@ -57,6 +43,8 @@ const Caption = () => {
 };
 
 const Title = styled('h1')`
+  font-size: '48px';
+  color: '#3EA8FF';
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -66,19 +54,6 @@ const Title = styled('h1')`
   flex-wrap: wrap;
   margin-top: 16px;
   margin-bottom: 16px;
-  /*font-family:
-    'Lato',
-    'General Sans',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol';*/
 
   ${({ theme }) => theme.breakpoints.down('laptop')} {
     font-size: 80px;
@@ -92,7 +67,14 @@ const Title = styled('h1')`
   color: ${({ theme }) => theme.palette.primary.main};
 `;
 
+/*const StyledButton = styled('h1');
+variant: 'contained';
+borderRadius: '55px';
+*/
+
 const Description = styled('div')`
+  color: '#333359';
+  max-width: '580px';
   text-align: center;
   font-family: Arial;
   font-size: 24px;

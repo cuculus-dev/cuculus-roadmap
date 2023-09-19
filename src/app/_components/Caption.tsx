@@ -1,10 +1,8 @@
 'use client';
 
-import { MuseoModerno } from '@next/font/google';
+import { MuseoModerno } from 'next/font/google';
 import { styled } from '@mui/material/styles';
 import LinkButton from '@/components/common/atoms/LinkButton';
-import { CloudFormationInit } from 'aws-cdk-lib/aws-ec2';
-import { Color } from 'aws-cdk-lib/aws-cloudwatch';
 
 const museoModerno = MuseoModerno({ subsets: ['latin'] });
 

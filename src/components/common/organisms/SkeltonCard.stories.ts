@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Caption from './Caption';
+import SkeltonCard from './SkeltonCard';
 
 const meta = {
-  component: Caption,
-} satisfies Meta<typeof Caption>;
+  component: SkeltonCard,
+  parameters: {},
+  tags: ['autodocs'],
+  argTypes: {},
+} satisfies Meta<typeof SkeltonCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

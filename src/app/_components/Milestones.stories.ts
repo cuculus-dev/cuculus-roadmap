@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Caption from './Caption';
+import Milestones from './Milestones';
 
 const meta = {
-  component: Caption,
-} satisfies Meta<typeof Caption>;
+  component: Milestones,
+  parameters: {},
+  tags: ['autodocs'],
+  argTypes: {},
+} satisfies Meta<typeof Milestones>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

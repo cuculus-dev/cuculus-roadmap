@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import LinkButton from './LinkButton';
 
 const meta = {
-  title: 'components/common/atoms/LinkButton',
   component: LinkButton,
   parameters: {},
   tags: ['autodocs'],

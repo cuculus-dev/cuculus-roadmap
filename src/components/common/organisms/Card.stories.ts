@@ -1,19 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import CuculusLogo from './CuculusLogo';
+import Card from './Card';
 
 const meta = {
-  component: CuculusLogo,
+  component: Card,
   parameters: {},
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof CuculusLogo>;
+} satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Home: Story = {
+export const Default: Story = {
   args: {
-    href: '/',
+    title: 'タイトル',
+    description: '説明',
+    state: 'closed',
   },
 };

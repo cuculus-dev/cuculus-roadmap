@@ -16,14 +16,13 @@ const Caption = () => {
           <span>Roadmap</span>
         </Title>
         <Description style={{}}>
-          <span>
-            Cuculusは新しいけどどこか懐かしい短文投稿サービスです。
-            <br />
-          </span>
+          <span>Cuculusは新しいけど</span>
+          <span>どこか懐かしい短文投稿サービスです。</span>
           <span>
             事前に計画を公開することでみなさんとプロジェクトの方向性を共有し、
-            <br />
-            意見や要望を募集し、よりよいSNSを作っていこうと考えています。
+          </span>
+          <span>
+            意見や要望を取り入れてよりよいSNSを作っていこうと考えています。
           </span>
         </Description>
         <div style={{ margin: '0 auto', textAlign: 'center' }}>

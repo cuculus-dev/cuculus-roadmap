@@ -43,3 +43,6 @@ next-env.d.ts
 # sst
 .sst
 cdk.context.json
+
+# storybook
+storybook-static

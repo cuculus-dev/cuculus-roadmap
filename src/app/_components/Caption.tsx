@@ -10,12 +10,12 @@ const Caption = () => {
   return (
     <div>
       <div style={{ padding: '16px' }}>
-        <Title style={{}} className={museoModerno.className}>
+        <Title className={museoModerno.className}>
           <span>Cuculus</span>
           <span>&nbsp;</span>
           <span>Roadmap</span>
         </Title>
-        <Description style={{}}>
+        <Description>
           <span>Cuculusは新しいけど</span>
           <span>どこか懐かしい短文投稿サービスです。</span>
           <span>
@@ -64,14 +64,9 @@ const Title = styled('h1')`
   color: ${({ theme }) => theme.palette.primary.main};
 `;
 
-/*const StyledButton = styled('h1');
-variant: 'contained';
-borderRadius: '55px';
-*/
-
 const Description = styled('div')`
-  color: '#333359';
-  max-width: '580px';
+  color: #333359;
+  max-width: 580px;
   text-align: center;
   font-family: Arial;
   font-size: 24px;

@@ -4,7 +4,7 @@ import { MuseoModerno } from 'next/font/google';
 import { styled } from '@mui/material/styles';
 import LinkButton from '@/components/common/atoms/LinkButton';
 
-const museoModerno = MuseoModerno({ subsets: ['latin'] });
+const museoModerno = MuseoModerno({ subsets: ['latin'], weight: ['600'] });
 
 const Caption = () => {
   return (
@@ -30,6 +30,7 @@ const Caption = () => {
             variant="contained"
             sx={{ borderRadius: '55px' }}
             href="https://github.com/orgs/cuculus-dev/discussions/categories/ideas"
+            target="_blank"
           >
             アイデア/機能を提案する
           </LinkButton>
@@ -40,8 +41,8 @@ const Caption = () => {
 };
 
 const Title = styled('h1')`
-  font-size: '48px';
-  color: '#3EA8FF';
+  font-size: 48px;
+  color: #3ea8ff;
   font-style: normal;
   font-weight: 600;
   line-height: normal;

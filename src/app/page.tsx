@@ -3,9 +3,11 @@ import Milestones from '@/app/_components/Milestones';
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ display: 'flex' }}>
       <Caption />
-      <Milestones />
+      <div style={{ display: 'row' }}>
+        <Milestones />
+      </div>
     </main>
   );
 }

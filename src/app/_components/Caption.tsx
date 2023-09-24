@@ -1,13 +1,16 @@
 'use client';
 
+import { MuseoModerno } from 'next/font/google';
 import { styled } from '@mui/material/styles';
 import LinkButton from '@/components/common/atoms/LinkButton';
+
+const museoModerno = MuseoModerno({ subsets: ['latin'], weight: ['600'] });
 
 const Caption = () => {
   return (
     <div>
       <div style={{ padding: '16px' }}>
-        <Title>
+        <Title className={museoModerno.className}>
           <span>Cuculus</span>
           <span>&nbsp;</span>
           <span>Roadmap</span>
@@ -24,8 +27,10 @@ const Caption = () => {
         </Description>
         <div style={{ margin: '0 auto', textAlign: 'center' }}>
           <LinkButton
-            variant="outlined"
+            variant="contained"
+            sx={{ borderRadius: '55px' }}
             href="https://github.com/orgs/cuculus-dev/discussions/categories/ideas"
+            target="_blank"
           >
             アイデア/機能を提案する
           </LinkButton>
@@ -36,26 +41,17 @@ const Caption = () => {
 };
 
 const Title = styled('h1')`
+  font-size: 48px;
+  color: #3ea8ff;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   display: flex;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
   margin-top: 16px;
   margin-bottom: 16px;
-  font-family:
-    'General Sans',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol';
-
-  font-size: 112px;
 
   ${({ theme }) => theme.breakpoints.down('laptop')} {
     font-size: 80px;
@@ -70,15 +66,18 @@ const Title = styled('h1')`
 `;
 
 const Description = styled('div')`
-  font-weight: 400;
+  color: #333359;
+  max-width: 580px;
   text-align: center;
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin: 0 auto;
   padding-right: 16px;
   padding-left: 16px;
   color: ${({ theme }) => theme.palette.grey[800]};
-
-  max-width: 780px;
-  font-size: 24px;
 
   ${({ theme }) => theme.breakpoints.down('laptop')} {
     max-width: 530px;

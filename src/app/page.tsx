@@ -1,30 +1,36 @@
+'use client';
 import Caption from '@/app/_components/Caption';
 import Milestones from '@/app/_components/Milestones';
 import { styled } from '@mui/material/styles';
 
 export default function Home() {
   return (
-    <main style={{}}>
-      <LeftColumn />
-      <Caption />
+    <Main>
+      <LeftColumn>
+        <Caption />
+      </LeftColumn>
 
-      <div style={{}}>
+      <RightColumn>
         <Milestones />
-        <RightColumn />
-      </div>
-    </main>
+      </RightColumn>
+    </Main>
   );
 }
 
-const LeftColumn = styled('div')`
+const Main = styled('main')`
   display: flex;
-  margin: auto;
+  gap: 93px;
   justify-content: center;
+  position: relative;
+`;
+
+const LeftColumn = styled('div')`
+  display: row;
+  justify-content: flex-start;
+  max-width: 580px;
 `;
 
 const RightColumn = styled('div')`
   display: row;
-  width: 111%;
-  justify-content: center;
-  padding: 1%;
+  max-width: 645px;
 `;

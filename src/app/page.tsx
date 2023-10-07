@@ -19,18 +19,20 @@ export default function Home() {
 
 const Main = styled('main')`
   display: flex;
-  gap: 93px;
   justify-content: center;
   position: relative;
 `;
 
 const LeftColumn = styled('div')`
-  display: row;
+  display: block;
   justify-content: flex-start;
+  padding-top: 24px;
+  margin-right: 93px;
   max-width: 580px;
 `;
 
 const RightColumn = styled('div')`
-  display: row;
+  display: block;
+  padding-top: 75px;
   max-width: 645px;
 `;
